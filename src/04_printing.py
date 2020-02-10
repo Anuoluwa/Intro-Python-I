@@ -13,6 +13,7 @@ z = "I like turtles!"
 # x is 10, y is 2.25, z is "I like turtles!"
 
 # Use the 'format' string method to print the same thing
-print("%x, %y, %z" % (10, 2.24552, "I like turtles!"))
+print("x is %i , y is %6.5f, z is %s" % (10, 2.24552, "I like turtles!"))
 
 # Finally, print the same thing using an f-string
+print("Using the f-string ==> ", f"x is {x}, y is {y} z is {z}")
