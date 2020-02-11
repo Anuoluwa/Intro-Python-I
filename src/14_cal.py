@@ -36,22 +36,19 @@ import datetime
 def calendar_checker():
     dt = datetime.datetime.today()
     calc = calendar.TextCalendar(calendar.SUNDAY)
-    if len(sys.argv) == 1:
-        print(calc.formatmonth(dt.year, dt.month))
-        sys.exit()
+    try:
+        if len(sys.argv) == 1:
+            print(calc.formatmonth(dt.year, dt.month))
+            sys.exit()
 
-    elif len(sys.argv) == 2:
-        print(calc.formatmonth(dt.year, int(sys.argv[1])))
-        sys.exit()
+        if len(sys.argv) == 2:
+            print(calc.formatmonth(dt.year, int(sys.argv[1])))
+            sys.exit()
 
-    elif len(sys.argv) == 3:
-        #print((sys.argv[0]), sys.argv[1], sys.argv[2], len(str(sys.argv[0])) )
-        print(calc.formatmonth(int(sys.argv[2]), int(sys.argv[1])))
-        sys.exit()
-    else:
-        print(
-            'Please the argv are not in the right format, you can run the program on command line like so \'python3 '
-            '14_cal.py 4 2015\' ')
-
+        if len(sys.argv) == 3:
+            print(calc.formatmonth(int(sys.argv[2]), int(sys.argv[1])))
+            sys.exit()
+    except ValueError:
+        print("{!r} is not a numeric value".format(sys.argv))
 
 calendar_checker()
