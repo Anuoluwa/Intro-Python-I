@@ -11,9 +11,46 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 
 # YOUR CODE HERE
 
+with open('./foo.txt') as foo_content:
+    read_foo = foo_content.read()
+    print(read_foo)
+
+foo_content.closed
+
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
 # then close the file. Open up "bar.txt" and inspect it to make
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
+def banner(s, width=69):
+    stars = '*' * width
+    pad = (width + len(s)) // 2
+    return f'{stars}\n{s:>{pad}}\n{stars}'
+
+
+content = f"""
+ { banner("Course Details")}
+ Course: CSEU3,
+ Course Instructor: Tom Tarpey,
+ TL: Ojo Timileyin
+"""
+
+#write into the file
+with open("bar.txt", "w+") as bar_content:
+    read_bar = bar_content.write(content)
+
+# this to inspect == read
+with open('./bar.txt') as bar_content:
+    read_bar = bar_content.read()
+    print(read_bar)
+
+bar_content.closed
+
+#result
+#  *********************************************************************
+#                            Course Details
+# *********************************************************************
+#  Course: CSEU3,
+#  Course Instructor: Tom Tapey,
+#  TL: Ojo Timilehin
