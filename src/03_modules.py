@@ -19,6 +19,7 @@ import sys
 
 
 import os
+import platform
 # See the docs for the OS module: https://docs.python.org/3.7/library/os.html
 
 # Print the current process ID
@@ -31,3 +32,7 @@ print('current working directory ', os.getcwd())
 # Print out your machine's login name
 # YOUR CODE HERE
 print("machine's login name ", os.getlogin())
+print("Python ", sys.version)
+print("Python version, another way", platform.python_version())
+print("Machine Details", platform.mac_ver(release='', versioninfo=('', '', ''), machine=''))
+print("List arguments", sys.argv)

@@ -16,7 +16,7 @@ print(y)
 # Write a list comprehension to produce the cubes of the numbers 0-9:
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
 
-y = [num*num*num for num in range(0, 10)]
+y = [num**3 for num in range(0, 10)]
 
 print(y, 'cubes of number')
 
