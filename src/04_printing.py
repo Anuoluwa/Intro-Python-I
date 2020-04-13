@@ -18,4 +18,4 @@ print("x is %i , y is %6.5f, z is %s" % (x, y, z))
 print("'format' string method", "x is {} , y is {}, z is {}".format(x, y, z))
 
 # Finally, print the same thing using an f-string
-print("Using the f-string ==> ", f"x is {x}, y is {y} z is {z}")
+print("Using the f-string ==> ", f"x is {x}, y is {y} , z is {z}")
