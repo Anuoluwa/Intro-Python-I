@@ -18,7 +18,7 @@ print(a[1])
 print(a[-2])
 
 # Output the last three elements in the array: [7, 9, 6]
-print(a[-1])
+print(a[-1],'......')
 
 # Output the two middle elements in the array: [1, 7]
 

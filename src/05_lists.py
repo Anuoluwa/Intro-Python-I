@@ -39,3 +39,6 @@ print(x)
 result = map(lambda num: num * 1000, x)
 
 print('second sum', list(result))
+
+print(x,  "LISTS")
+print(x[::-1])
